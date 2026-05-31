@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sasha App</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="app">
+
+  <div class="screen active" id="s1">
+    <h1>Система</h1>
+    <p>Саша, входящее сообщение</p>
+    <button onclick="go(2)">Открыть</button>
+  </div>
+
+  <div class="screen" id="s2">
+    <h1>Вопрос</h1>
+    <p>Маша тебе нравится?</p>
+
+    <div class="box">
+      <button class="yes" onclick="startHearts()">Да</button>
+      <button id="noBtn" class="no">Нет</button>
+    </div>
+  </div>
+
+  <!-- ИГРА 1 -->
+  <div class="screen" id="s3">
+    <h1>Испытание 1</h1>
+    <p>Поймай 15 сердечек</p>
+    <div id="game1"></div>
+    <div id="score1">0 / 15</div>
+  </div>
+
+  <!-- ИГРА 2 (КРЕСТИКИ-НОЛИКИ) -->
+  <div class="screen" id="s4">
+    <h1>Крестики-нолики</h1>
+    <p>Выиграй у системы</p>
+
+    <div id="board"></div>
+  </div>
+
+  <!-- ФИНАЛ -->
+  <div class="screen" id="s5">
+    <h1 id="finalTitle"></h1>
+    <p id="finalText"></p>
+
+    <div id="kiss">💋</div>
+
+    <img src="images/sasha.jpg">
+    <button onclick="restart()">перезапуск</button>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
